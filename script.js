@@ -27,10 +27,14 @@ buttons.forEach((btn) => {
 
     btn.addEventListener('click', () =>{
 
-        if (!btn.id.match('erase')){
-
-            realTimeScreenValue.push(btn.value);
-            currentInput.innerHTML = realTimeScreenValue.join('');
+        // Verificando se o usuario digitou virgula mais de uma vez para cada input
+        if (!btn.id.match('erase')) {
+            if (btn.value == '.' && realTimeScreenValue.includes('.',[,])){
+            }else{
+                // Responsavel por exibir na tela o valor do botão pressionado
+                realTimeScreenValue.push(btn.value)
+                currentInput.innerHTML = realTimeScreenValue.join('');
+            }
 
             if (btn.classList.contains('num_btn')){
                 answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
