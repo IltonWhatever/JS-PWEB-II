@@ -29,7 +29,7 @@ buttons.forEach((btn) => {
 
         // Verificando se o usuario digitou virgula mais de uma vez para cada input
         if (!btn.id.match('erase')) {
-            if (btn.value == '.' && realTimeScreenValue.includes('.',[,])){
+            if (operador(btn.value)){
             }else{
                 // Responsavel por exibir na tela o valor do botão pressionado
                 realTimeScreenValue.push(btn.value)
@@ -58,7 +58,20 @@ buttons.forEach((btn) => {
         }
 
     });
-
-
-
 });
+
+function operador(valorBotao){
+    if(valorBotao == '.' && realTimeScreenValue.includes('.',[,])){
+        return true;
+    }else if(valorBotao == '*' && realTimeScreenValue.includes('*',[,])){
+        return true;
+    }else if(valorBotao == '+' && realTimeScreenValue.includes('+',[,])){
+        return true;
+    }else if(valorBotao == '-' && realTimeScreenValue.includes('-',[,])){
+        return true;
+    }else if(valorBotao == '/' && realTimeScreenValue.includes('/',[,])){
+        return true;
+    }else if(valorBotao == '%' && realTimeScreenValue.includes('%',[,])){
+        return true;
+    }
+};
