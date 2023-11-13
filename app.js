@@ -17,6 +17,8 @@ const buscarDoguinho = (e) =>{
         }
     }
     xhr.send()
-}
+    window.scrollTo(0, document.body.scrollHeight);
+} 
+
 const btnMostrar = document.querySelector('#mostrar-dogs')
 btnMostrar.addEventListener('click', buscarDoguinho)

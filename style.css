@@ -12,3 +12,21 @@ img {
     height: 250px;
     border-radius: 8px;
 }
+
+@keyframes rainbow {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
+}
+h1 {
+    font-family: 'Arial', sans-serif;
+    animation: rainbow 6s linear infinite;
+}
+button{
+    font-family: 'Arial', sans-serif;
+    animation: rainbow 6s linear infinite;
+}
