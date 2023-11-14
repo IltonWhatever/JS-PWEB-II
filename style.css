@@ -5,12 +5,23 @@
     flex-wrap: wrap;
     padding: 20px;
 }
-
 img {
     display: block;
     width: auto;
     height: 250px;
     border-radius: 8px;
+}
+figure{
+    display: block;
+    width: auto;
+    height: 300px;
+    border-radius: 8px; 
+    background-color: darkgrey;
+}
+figcaption{
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes rainbow {
