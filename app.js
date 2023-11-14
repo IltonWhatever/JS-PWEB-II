@@ -7,9 +7,15 @@ const buscarDoguinho = (e) =>{
             if(xhr.status === 200){
                 const dogs = JSON.parse(xhr.responseText)
                 dogs.forEach(dog => {
+                    const figure = document.createElement('figure')
                     const img = document.createElement('img')
+                    let figcaption = document.createElement('figcaption')
+
                     img.src = dog.url
-                    document.querySelector('#Doguinhos').appendChild(img)
+                    figcaption.textContent = `Altura: ${dog.width} Largura: ${dog.height}`
+                    document.querySelector('#Doguinhos').appendChild(figure)
+                    figure.appendChild(img)
+                    figure.appendChild(figcaption)
                 })
             } else{
                 alert('Erro na requisição!')
