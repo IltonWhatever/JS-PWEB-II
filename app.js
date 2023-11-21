@@ -6,6 +6,7 @@ const profileBio = document.querySelector('.text') // Bio
 const profileSeguindo = document.querySelector('#seguindo') // Numero de seguindo
 const profileSeguidores = document.querySelector('#seguidores') // Numero de seguidores
 const profileRepositories = document.querySelector('#repositorios') // Numero de repositorios
+const profileGit = document.querySelector('.fab fa-github') // Icone do Github
 
 const btnFollow = document.querySelector('#followLink')
 
@@ -63,6 +64,10 @@ const montarCard = (github) =>{
 
     // Muda o link para o link do github
     btnFollow.href = github.html_url
+
+    // Muda o link do icone github
+    profileGit.href = github.html_url
+
 }
 
 const btnMostrar = document.querySelector('#search')
