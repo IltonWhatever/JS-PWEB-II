@@ -1,6 +1,6 @@
 const divImagemPrincipal = document.querySelector('#imagem-principal');
-const imagemPrincipal = divImagemPrincipal.querySelector('#imgFull');
-const textoAlternativo =divImagemPrincipal.querySelector('.texto-alternativo')
+const imagemPrincipal = divImagemPrincipal.querySelector('img');
+const textoAlternativo = divImagemPrincipal.querySelector('.texto-alternativo');
 const btnProximo = divImagemPrincipal.querySelector('.proximo');
 const btnAterior = divImagemPrincipal.querySelector('.anterior');
 const todasImagens = document.querySelectorAll('#imagens img');
@@ -25,7 +25,7 @@ const selecionarImagem = function(){
     todasImagens.forEach(function(imagem){
         imagem.classList = "";
     })
-    todasImagens[idImagemAtiva].classList.add("")
+    todasImagens[idImagemAtiva].classList.add("selecionada")
 }
 
 btnProximo.addEventListener('click', proximaImagem)
@@ -33,6 +33,8 @@ btnAterior.addEventListener('click', voltarImagem)
 
 todasImagens.forEach( function(imagem, numeroImage){
     imagem.addEventListener("click", function(){
-        imagemPrincipal.src = todasImagens[idImagemAtiva]
+        idImagemAtiva = numeroImage;
+        textoAlternativo.innerHTML = todasImagens[idImagemAtiva].alt
+        selecionarImagem()
     })
 })
