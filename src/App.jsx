@@ -12,6 +12,7 @@ function App() {
     <div>
       <h1>Primeira Aplicação Teste</h1>
       <h2>José Ilton da Silva Filho</h2>
+      <h3>Clique no Doguinho Desconfiado</h3>
       <img src={url} alt="Cachorro" onClick={() =>{
         if (url === desconfia){
           setUrl(vergonha);
