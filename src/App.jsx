@@ -7,7 +7,7 @@ function App() {
     <div>
       <Hello/>
       <Hello name="Ilton"/>
-
+      <Hello>Doidera</Hello>
       <br></br>
       <Dog/>
     </div>
