@@ -1,15 +1,29 @@
-import Hello from "./Hello"
-import Dog from "./Dog"
+import { useState } from "react"
+import Aluno from "./Aluno"
 
 function App() {
+const alunos = ["Alan", "João", "Maria", "Pedro", "Vilma"]
+const [notaPadrao, setNotaPadrao] = useState(0)
 
   return (
     <div>
-      <Hello/>
-      <Hello name="Ilton"/>
+      <h1>Lançar Nota</h1>
+      <p>
+        Disciplina:
+        <input type="text" />
+      </p>
+      <p>
+        <span>Aluno</span>
+        <span>Nota</span>
+      </p>
+      
+      {alunos.map((al, index)=>
+        <Aluno key={index} name={al} nota={notaPadrao}/>
+      )}
 
-      <br></br>
-      <Dog/>
+
+      <button>Limpar</button>
+      <button>Salvar</button>
     </div>
   )
 }
