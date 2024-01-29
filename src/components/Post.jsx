@@ -8,6 +8,17 @@ function Post({
     conteudo
 }){
     const [isLiked, setIsLike] = useState(false)
+    const [likes, setLikes] = useState(0)
+
+    function handleLike(){
+        if (isLiked){
+            setLikes(likes -1)
+        }else{
+            setLikes(likes +1)
+        }
+
+        setIsLike(!isLiked)
+    }
 
     return(
         <div className="post">
@@ -15,11 +26,11 @@ function Post({
             <img src={imagem} alt={titulo} />
             <p className="content">{conteudo}</p>
             <div className='curtidas'>
-                <span>0 Curtidas </span>
+                <span>{likes} Curtidas </span>
                 { isLiked ? (
-                    <FaHeart onClick={()=> setIsLike(false)}/>
+                    <FaHeart onClick={handleLike}/>
                 ):(
-                    <FaRegHeart onClick={()=> setIsLike(true)}/>
+                    <FaRegHeart onClick={handleLike}/>
                 )}
 
             </div>
