@@ -1,0 +1,23 @@
+.post{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    border: 1px solid #ddd;
+}
+
+.post .header{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.post .content{
+    padding: 10px 0;
+    color: #666;
+}
+
+
