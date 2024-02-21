@@ -6,7 +6,7 @@ function App() {
   
   useEffect(() => {
     console.log("Searching for Data")
-    fetch("https://dummyjson.com/products/1").then(resp =>{
+    fetch("https://dummyjson.com/products").then(resp =>{
       console.log("Data is ready")
       if(resp.ok){
         return resp.json()
@@ -21,7 +21,7 @@ function App() {
   return(
     <>
       { product ? (
-        <Product p_info={product}/>
+         product.products.map( (info, idx) => <Product p_info={info}/>)
       ):(
         "Loading..."
       ) }
