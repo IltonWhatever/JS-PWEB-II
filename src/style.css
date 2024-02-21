@@ -40,7 +40,7 @@ body {
     margin-top: 20px;
 }
 
-.product .left #imagens img {
+.product .left #images img {
     width: 100px;
     height: 100px;
     object-fit: cover;
