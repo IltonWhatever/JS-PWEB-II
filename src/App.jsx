@@ -19,13 +19,13 @@ function App() {
   },[])
   
   return(
-    <>
+    <div className='page'>
       { product ? (
          product.products.map( (info, idx) => <Product p_info={info}/>)
       ):(
         "Loading..."
       ) }
-    </>
+    </div>
   )
   
 }
